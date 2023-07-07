@@ -24,7 +24,7 @@ public class WebViewUtil {
      * web view 加载
      */
     @SuppressLint("JavascriptInterface")
-    protected void loadWebView(Context context, WebView webView, String url, String paramJson, OnWebViewListener listener) {
+    public void loadWebView(Context context, WebView webView, String url, String paramJson, OnWebViewListener listener) {
         //要嵌套的uniapp页面所在安卓下的路径(也就是assets下的路径，记得
         //assets路径就是要写成android_asset,不要改)
 //        String url = "file:///android_asset/ui/h5/index.html";
