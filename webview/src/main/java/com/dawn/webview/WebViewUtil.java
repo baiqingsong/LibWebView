@@ -96,13 +96,9 @@ public class WebViewUtil {
                     webViewFinish = true;
                     if(!TextUtils.isEmpty(paramJson)) {
                         //发送参数
-                        webView.evaluateJavascript("javascript:pageStartParam('" + paramJson + "')", new ValueCallback<String>() {
-                            @Override
-                            public void onReceiveValue(String value) {
-                                if(listener != null)
-                                    listener.getWebViewParam(value);
-                            }
-
+                        webView.evaluateJavascript("javascript:pageStartParam('" + paramJson + "')", value -> {
+                            if(listener != null)
+                                listener.getWebViewParam(value);
                         });
                     }
                     if(listener != null)

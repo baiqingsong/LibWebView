@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 
 
 //首先要集成androidx.webkit:webkit:1.4.0
-public class SdcardStoragePathHandler implements WebViewAssetLoader.PathHandler {
+class SdcardStoragePathHandler implements WebViewAssetLoader.PathHandler {
     @Nullable
     @Override
     public WebResourceResponse handle(@NonNull String filePath) {
